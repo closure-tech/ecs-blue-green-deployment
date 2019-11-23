@@ -1,5 +1,3 @@
-# **NOTE:** Same reference architecture, but using [AWS Fargate](https://aws.amazon.com/fargate/) is available in [fargate branch](https://github.com/awslabs/ecs-blue-green-deployment/tree/fargate)
-
 # Blue/Green deployments on ECS
 
 This reference architecture is in reference to blog post on [blue green deployments on ECS](https://aws.amazon.com/blogs/compute/bluegreen-deployments-with-amazon-ecs/). It creates a continuous delivery by leveraging AWS CloudFormation templates. The templates creates resources using Amazon's Code* services to build and deploy containers onto an ECS cluster as long running services. It also includes a manual approval step facilitated by lambda function that discovers and swaps target group rules between 2 target groups, promoting the green version to production and demoting the blue version to staging.
